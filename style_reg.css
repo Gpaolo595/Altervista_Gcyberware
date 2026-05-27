@@ -1,0 +1,59 @@
+
+body {
+  font-family: Arial, sans-serif;   /* Carattere leggibile */
+  background-color: #f2f2f2;        /* Sfondo chiaro */
+  display: flex;                     /* Flexbox per centrare il form */
+  flex-direction: column;            /* Dispone titolo e form in verticale */
+  align-items: center;               /* Centra orizzontalmente */
+  padding-top: 50px;                 /* Distanza dall’alto */
+  margin: 0;                         /* Rimuove margini di default */
+}
+
+/* ============================= */
+/* TITOLO DELLA PAGINA           */
+/* ============================= */
+h1 {
+  margin-bottom: 20px;   /* Spazio tra titolo e form */
+  text-align: center;    /* Titolo centrato */
+  color: #333;           /* Colore grigio scuro */
+}
+
+/* ============================= */
+/* FORM E CAMPI                  */
+/* ============================= */
+form {
+  display: flex;
+  flex-direction: column;   /* Campi uno sotto l’altro */
+  width: 300px;             /* Larghezza fissa dei campi */
+}
+
+/* INPUT E PULSANTI */
+input, button {
+  padding: 10px;            /* Spazio interno */
+  margin-bottom: 15px;      /* Spazio tra i campi */
+  border-radius: 5px;       /* Angoli arrotondati */
+  border: 1px solid #ccc;   /* Bordo grigio chiaro */
+  box-sizing: border-box;    /* Include padding e bordo nella larghezza */
+  font-size: 14px;           /* Testo leggibile */
+}
+
+/* PULSANTE */
+button {
+  background-color: black; /* nero */
+  color: white;              /* Testo bianco */
+  border: none;              /* Rimuove il bordo */
+  cursor: pointer;           /* Cambia cursore al passaggio */
+  transition: background 0.3s;
+}
+
+
+
+/* LINK DI REGISTRAZIONE / ALTRO */
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
