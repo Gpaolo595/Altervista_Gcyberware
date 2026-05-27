@@ -1,0 +1,5 @@
+.vscode/
+node_modules/
+*.log
+*.tmp
+Gcyberware/components/config/groq.php

@@ -1,0 +1,81 @@
+/* ============================= */
+/* STILE GENERALE DELLA PAGINA   */
+/* ============================= */
+
+body {
+  font-family: Arial, sans-serif;  /* Tipo di carattere per tutta la pagina */
+  background-color: #f2f2f2;       /* Sfondo grigio chiaro */
+  display: flex;                    /* Usa flexbox per allineare gli elementi */
+  flex-direction: column;           /* Dispone i figli (h1 + box) in verticale */
+  align-items: center;              /* Centra gli elementi orizzontalmente */
+  justify-content: flex-start;      /* Inizia dall’alto della pagina */
+  min-height: 100vh;                /* L’altezza minima è pari all’altezza della finestra */
+  padding-top: 50px;                /* Spazio tra il bordo superiore e il contenuto */
+  margin: 0;                         /* Rimuove margini di default del browser */
+}
+
+/* ============================= */
+/* TITOLO DELLA PAGINA           */
+/* ============================= */
+
+h1 {
+  margin-bottom: 20px;             /* Spazio tra il titolo e il box del login */
+  text-align: left;              /* Centra il testo */
+  color: #333;                     /* Colore del testo (grigio scuro) */
+}
+
+/* ============================= */
+/* BOX DEL LOGIN                  */
+/* ============================= */
+
+.login-box {
+  background: white;                                   /* Sfondo bianco del box */
+  padding: 30px;                                      /* Spazio interno del box */
+  border-radius: 10px;                                /* Angoli arrotondati */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  align-items: center;                                 /* Ombra leggera sotto il box */
+  width: 300px;                                       /* Larghezza fissa del box */
+}
+
+/* ============================= */
+/* INPUT E PULSANTE              */
+/* ============================= */
+
+input, button {
+  width: 100%;          /* Riempie tutta la larghezza del box */
+  margin-top: 5px;      /* Spazio sopra ogni elemento */
+  padding: 8px;         /* Spazio interno per scrivere dentro input */
+  border-radius: 5px;   /* Angoli leggermente arrotondati */
+  border: 1px solid #ccc; /* Bordo grigio chiaro */
+  box-sizing: border-box; /* Include padding e bordo nella larghezza */
+}
+
+/* ============================= */
+/* PULSANTE                     */
+/* ============================= */
+
+button {
+  margin-top: 15px;            /* Spazio sopra il pulsante */
+  background-color: #4CAF50;   /* Colore verde */
+  color: white;                /* Testo bianco */
+  border: none;                /* Rimuove il bordo di default */
+  cursor: pointer;             /* Cambia il cursore quando si passa sopra */
+  transition: background 0.3s; /* Effetto di transizione quando cambia colore */
+}
+
+/* Cambio colore al passaggio del mouse */
+button:hover {
+  background-color: #45a049;   /* Verde leggermente più scuro */
+}
+
+/* ============================= */
+/* LINK DI REGISTRAZIONE         */
+/* ============================= */
+
+a {
+  color: #ff0000;       /* Colore rosso dei link */
+ 
+
+a:hover {
+  text-decoration: underline; /* Sottolinea al passaggio del mouse */
+}
