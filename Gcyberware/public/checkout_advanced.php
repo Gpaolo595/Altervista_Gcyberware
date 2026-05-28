@@ -112,6 +112,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Aggiornare ordine con dati finali
             Order::updateShippingAndPayment($order_id, $shipping, $payment_method, $notes);
             
+            // Decrementare lo stock per ogni prodotto dell'ordine
+            foreach ($cart as $product_id => $qty) {
+                Product::decrementStock($product_id, $qty);
+            }
+            
             // Pulire sessione
             CartController::clear();
             unset($_SESSION['checkout_order_id']);

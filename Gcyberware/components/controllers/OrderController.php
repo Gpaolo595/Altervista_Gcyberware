@@ -18,6 +18,10 @@ class OrderController {
 
         foreach ($cart as $product_id => $qty) {
             $product = Product::find($product_id);
+            // Verificare che ci sia stock sufficiente
+            if (!Product::isInStock($product_id, $qty)) {
+                return false; // Out of stock
+            }
             $total += $product['price'] * $qty;
         }
 
@@ -26,6 +30,8 @@ class OrderController {
         foreach ($cart as $product_id => $qty) {
             $product = Product::find($product_id);
             OrderItem::add($order_id, $product_id, $qty, $product['price']);
+            // Decrementare lo stock
+            Product::decrementStock($product_id, $qty);
         }
 
         CartController::clear();
