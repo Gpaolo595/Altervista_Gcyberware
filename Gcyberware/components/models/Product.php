@@ -51,17 +51,4 @@ public static function update($id, $name, $category_id, $price, $stock, $descrip
     header("Location: /Gcyberware/public/products.php");
     exit;
  }
-
-    public static function featured() {
-        global $DB;
-        $res = $DB->query("SELECT * FROM products WHERE featured = 1 ORDER BY id DESC");
-        return $res->fetch_all(MYSQLI_ASSOC);
-    }
-
-    public static function toggleFeatured($id, $featured) {
-        global $DB;
-        $stmt = $DB->prepare("UPDATE products SET featured=? WHERE id=?");
-        $stmt->bind_param("ii", $featured, $id);
-        return $stmt->execute();
-    }
 }
