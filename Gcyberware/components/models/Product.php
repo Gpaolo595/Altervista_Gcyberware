@@ -51,4 +51,42 @@ public static function update($id, $name, $category_id, $price, $stock, $descrip
     header("Location: /Gcyberware/public/products.php");
     exit;
  }
+
+    public static function featured() {
+        global $DB;
+        $res = $DB->query("SELECT * FROM products WHERE featured = 1 ORDER BY id DESC");
+        return $res->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public static function toggleFeatured($product_id, $featured) {
+        global $DB;
+        $stmt = $DB->prepare("UPDATE products SET featured = ? WHERE id = ?");
+        $stmt->bind_param("ii", $featured, $product_id);
+        return $stmt->execute();
+    }
+
+    public static function decrementStock($product_id, $quantity) {
+        global $DB;
+        $stmt = $DB->prepare("UPDATE products SET stock = stock - ? WHERE id = ? AND stock >= ?");
+        $stmt->bind_param("iii", $quantity, $product_id, $quantity);
+        return $stmt->execute();
+    }
+
+    public static function isInStock($product_id, $quantity = 1) {
+        global $DB;
+        $stmt = $DB->prepare("SELECT stock FROM products WHERE id = ?");
+        $stmt->bind_param("i", $product_id);
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
+        return $result && $result['stock'] >= $quantity;
+    }
+
+    public static function getStock($product_id) {
+        global $DB;
+        $stmt = $DB->prepare("SELECT stock FROM products WHERE id = ?");
+        $stmt->bind_param("i", $product_id);
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
+        return $result ? $result['stock'] : 0;
+    }
 }

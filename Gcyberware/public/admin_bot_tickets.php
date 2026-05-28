@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../components/config/app.php";
+require_once COMPONENTS_PATH . "/lib/BotTicket.php";
 
 require_role('admin');
 

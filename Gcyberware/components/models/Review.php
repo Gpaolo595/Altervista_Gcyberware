@@ -2,6 +2,19 @@
 
 class Review {
 
+    public static function all() {
+        global $DB;
+        $stmt = $DB->prepare("
+            SELECT r.*, u.username, p.name as product_name
+            FROM reviews r
+            JOIN users u ON u.id = r.user_id
+            JOIN products p ON p.id = r.product_id
+            ORDER BY r.created_at DESC
+        ");
+        $stmt->execute();
+        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    }
+
     public static function findByProduct($product_id) {
         global $DB;
         $stmt = $DB->prepare("
