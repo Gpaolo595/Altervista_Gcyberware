@@ -23,6 +23,7 @@ require_once COMPONENTS_PATH . "/lib/chat_history.php";
 require_once COMPONENTS_PATH . "/lib/classifier.php";
 require_once COMPONENTS_PATH . "/lib/groq_client.php";
 require_once COMPONENTS_PATH . "/lib/product_search.php";
+require_once COMPONENTS_PATH . "/lib/BotTicket.php";
 
 // Modelli principali
 require_once COMPONENTS_PATH . "/models/User.php";

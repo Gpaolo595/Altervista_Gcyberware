@@ -54,7 +54,7 @@
                     </div>
                 </a>
 
-                <!-- Ticket -->
+                <!-- Ticket Support Utenti -->
                 <a href="/Gcyberware/public/operator.php"
                    class="card bg-accent text-accent-content shadow-lg hover:scale-105 transition duration-300">
 
@@ -64,6 +64,21 @@
                         <h2 class="card-title">Gestione Ticket</h2>
                         <p class="text-sm opacity-80">
                             Controlla richieste e supporto utenti
+                        </p>
+
+                    </div>
+                </a>
+
+                <!-- Ticket Bot -->
+                <a href="/Gcyberware/public/admin_bot_tickets.php"
+                   class="card bg-warning text-warning-content shadow-lg hover:scale-105 transition duration-300">
+
+                    <div class="card-body items-center text-center">
+                        <div class="text-5xl">🤖</div>
+
+                        <h2 class="card-title">Ticket Bot</h2>
+                        <p class="text-sm opacity-80">
+                            Problemi segnalati dal sistema
                         </p>
 
                     </div>

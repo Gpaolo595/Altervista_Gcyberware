@@ -39,9 +39,14 @@
             Totale: <b><?= number_format($total, 2) ?> €</b>
         </h3>
 
-        <a href="/Gcyberware/public/checkout.php">
-            <button>Procedi all'ordine</button>
-        </a>
+        <div style="margin-top: 20px; display: flex; gap: 10px;">
+            <a href="/Gcyberware/public/checkout_advanced.php?step=1">
+                <button class="btn btn-success">✨ Checkout Avanzato</button>
+            </a>
+            <a href="/Gcyberware/public/checkout.php">
+                <button class="btn btn-outline">Checkout Semplice</button>
+            </a>
+        </div>
 
     <?php endif; ?>
 

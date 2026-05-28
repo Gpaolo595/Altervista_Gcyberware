@@ -1,0 +1,18 @@
+{
+  "id": "TICKET-20260528-001",
+  "created_at": "2026-05-28 09:00:00",
+  "urgency": "🟡 Media",
+  "description": "Il campo `featured` non esiste nella tabella `products`. Database non ha schema SQL completo.",
+  "files": [
+    "/components/models/Product.php",
+    "/components/config/db.php"
+  ],
+  "root_cause": "Database inizializzato senza schema SQL. Nessun file .sql nel progetto.",
+  "resolution_steps": [
+    "Fornire schema.sql completo",
+    "Oppure eseguire ALTER TABLE manualmente",
+    "Oppure fornire accesso diretto al DB"
+  ],
+  "status": "OPEN",
+  "created_by": "BOT"
+}
